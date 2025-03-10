@@ -1,0 +1,194 @@
+/* General Container */
+.login-container {
+  display: flex;
+  flex-wrap: nowrap; /* Ensures items stay in a row on large screens */
+  height: 100%;
+  width: 100%;
+  background-color: #d1effe;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Wrapper for Left & Right Sections */
+.two-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 50px;
+}
+
+/* Left Content (DIAST + Student Image) */
+.left-content {
+  width: 50%; /* Adjusted width to take half the screen */
+  display: flex;
+  flex-direction: column; /* Stacks images vertically */
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Adds spacing between images */
+}
+
+/* DIAST Image */
+.DIAST-image img {
+  width: 80%; /* Makes image responsive */
+  max-width: 500px;
+  height: auto;
+}
+
+/* Student Image */
+.student-image img {
+  width: 80%;
+  max-width: 500px;
+  height: auto;
+}
+
+/* Right Section (Login Form) */
+.login-right {
+  width: 35%;
+  max-width: 400px;
+  background: white;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: left;
+}
+
+/* Form Title */
+.login-right h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Form Fields */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-form label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.login-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+}
+
+/* Forgot Password Link */
+.forgot-link {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+  text-align: left;
+  display: block;
+  margin-top: 5px;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* Login Button */
+.login-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .login-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .left-content {
+    width: 60%;
+  }
+
+  .DIAST-image img,
+  .student-image img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .login-right {
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .two-main {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .left-content {
+    width: 100%;
+  }
+
+  .DIAST-image img,
+  .student-image img {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .login-right {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .login-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .left-content {
+    width: 100%;
+    order: 2; /* Moves the images below the form */
+  }
+
+  .login-right {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    order: 1;
+  }
+
+  .DIAST-image img,
+  .student-image img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
+
+.
